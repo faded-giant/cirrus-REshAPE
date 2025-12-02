@@ -1,0 +1,25 @@
+{
+  "tiles": [
+    {
+      "attr": {
+        "Basename": "Image 42 zo-1 donut b&w_tile1", 
+        "Results": "/root/RESHAPE_clean/REShAPE/images/Processed/Temp/Image 42 zo-1 donut b&w_tile1_Results.csv", 
+        "Outlines": "/root/RESHAPE_clean/REShAPE/images/Processed/Temp/Image 42 zo-1 donut b&w_tile1_Outlines.tif", 
+        "Counted": "/root/RESHAPE_clean/REShAPE/images/Processed/Temp/Image 42 zo-1 donut b&w_tile1_Counted.tif"
+      }, 
+      "h": 1322, 
+      "w": 1322, 
+      "y": 0, 
+      "x": 0, 
+      "name": "Image 42 zo-1 donut b&w_tile1.tif"
+    }
+  ], 
+  "unit_conv": 1, 
+  "width": 1322, 
+  "numtilerows": 1, 
+  "numtilecolumns": 1, 
+  "height": 1322, 
+  "unit_pix": 1.0, 
+  "source": "/root/RESHAPE_clean/REShAPE/images/Image 42 zo-1 donut b&w.tif", 
+  "unit_real": 1.0
+}

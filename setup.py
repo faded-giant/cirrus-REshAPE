@@ -18,7 +18,17 @@ YUM_PACKAGES = [
     'openssl-devel',
     'libxml2-devel',
     'R',
+    # NEW (for VTK + Qt):
+    'cmake3',
+    'qt5-qtbase-devel',
+    'qt5-qttools-devel',
+    'qt5-qtsvg-devel',
+    'qt5-qtdeclarative-devel',
+    'mesa-libGL-devel',
+    'mesa-libGLU-devel',
+    'glew-devel',
 ]
+
 YUM_GROUPS = [
     'development tools',
 ]
@@ -57,15 +67,13 @@ class SudoInstaller(object):
         print json.dumps(self.context, indent=2)
     def run_sudo(self, *cmd, **opts):
         self.out = self.err = None
-        fullcmd = ['sudo', '-S'] + list(cmd)
-        args = {
-            'stdin': subprocess.PIPE,
-            'stdout': subprocess.PIPE,
-        }
+        fullcmd = ['sudo', '-SE'] + list(cmd)  # add -E to preserve env
+        args = {'stdin': subprocess.PIPE, 'stdout': subprocess.PIPE}
         args.update(opts)
         p = subprocess.Popen(fullcmd, **args)
-        self.out, self.err = p.communicate(self.sudopass+'\n')
+        self.out, self.err = p.communicate(self.sudopass + '\n')
         return p.wait()
+
     def command(self, *cmd, **opts):
         self.out = self.err = None
         fullcmd = list(cmd)
@@ -110,6 +118,8 @@ class SudoInstaller(object):
         return 0
     def thirdparty(self, *lst):
         os.chdir(os.path.join(BASEDIR, 'thirdparty'))
+        os.environ['Qt5_DIR'] = '/usr/lib64/cmake/Qt5'
+        os.environ['CMAKE_PREFIX_PATH'] = '/usr/lib64/cmake/Qt5'
         rc = self.run_sudo(sys.executable, 'install.py', stderr=sys.stderr)
         try:
             jtext = self.out.split(START_JSON_RESPONSE)[1].split(END_JSON_RESPONSE)[0]

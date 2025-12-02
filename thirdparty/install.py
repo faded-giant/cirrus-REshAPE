@@ -8,7 +8,7 @@ PACKAGES = [
     ('CMake3', 'cmake_inst.sh', '/opt/CMake3', ),
     ('version_check', 'CMakeLists.txt', '/opt/RsVersionCheck', ),
     ('Qt5', 'qt_inst.sh', '/opt/Qt', ),
-    ('VTK8', 'vtk_build.sh', '/opt/VTK8', ),
+    #('VTK8', 'vtk_build.sh', '/opt/VTK8', ),
     ('ITK4', 'itk_build.sh', '/opt/ITK4', ),
 ]
 

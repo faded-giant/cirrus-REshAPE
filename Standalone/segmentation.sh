@@ -1,5 +1,6 @@
 #!/bin/sh
 exe_name=$0
+echo "here1"
 exe_dir=`dirname "$0"`
 export LD_LIBRARY_PATH=.:/opt/MatlabRT/v97/runtime/glnxa64:/opt/MatlabRT/v97/bin/glnxa64:/opt/MatlabRT/v97/sys/os/glnxa64:/opt/MatlabRT/v97/extern/bin/glnxa64
 args=

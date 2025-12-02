@@ -1,0 +1,17 @@
+{
+  "SEGMENTATION": "/root/RESHAPE_clean/REShAPE/Standalone/segmentation.sh", 
+  "VTK_DIR": "/opt/VTK8/lib64/cmake/vtk-8.2", 
+  "MRT_ENV": "/opt/MatlabRT/v97/runtime/glnxa64:/opt/MatlabRT/v97/bin/glnxa64:/opt/MatlabRT/v97/sys/os/glnxa64:/opt/MatlabRT/v97/extern/bin/glnxa64", 
+  "MRT_DIR": "/opt/MatlabRT/v97", 
+  "ReshapeViewer": "/root/RESHAPE_clean/REShAPE/Imaging/ReshapeViewer", 
+  "VTK_MODULES_DIR": "/opt/VTK8/lib64/cmake/vtk-8.2/Modules", 
+  "CMAKE_VER": "3.16.5", 
+  "Qt5_DIR": "/opt/Qt/5.15.0/gcc_64/lib/cmake/Qt5", 
+  "VTK_VER": "8.2", 
+  "ITK_DIR": "/opt/ITK4/lib/cmake/ITK-4.13", 
+  "ReshapeImaging": "/root/RESHAPE_clean/REShAPE/Imaging/ReshapeImaging", 
+  "ITK_VER": "4.13", 
+  "Qt5_VER": "5.15.0", 
+  "FIJI": "/opt/Fiji.app/ImageJ-linux64", 
+  "RsCircles": "/root/RESHAPE_clean/REShAPE/Imaging/RsCircles"
+}
